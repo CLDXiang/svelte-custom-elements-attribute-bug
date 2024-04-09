@@ -1,12 +1,24 @@
 import { resolve } from 'node:path';
-
-import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { defineConfig } from 'vite';
 
+import { svelte } from '@sveltejs/vite-plugin-svelte';
+import vue from '@vitejs/plugin-vue';
+import react from '@vitejs/plugin-react'
+
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({}) => {
   return {
-    plugins: [svelte()],
+    plugins: [
+      svelte(),
+      vue({
+        template: {
+          compilerOptions: {
+            isCustomElement: (tag) => tag === 'my-component',
+          },
+        },
+      }),
+      react(),
+    ],
     build: {
       lib: {
         entry: resolve(__dirname, 'src/main.ts'),
@@ -14,7 +26,7 @@ export default defineConfig(({ mode }) => {
         fileName: 'components',
         formats: ['iife'],
       },
-      minify: mode === 'raw' ? false : undefined,
+      minify: false,
     },
   };
 });

@@ -13,8 +13,10 @@
      */
     "allowJs": true,
     "checkJs": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "demo/**/*.ts", "demo/**/*.js", "demo/**/*.svelte"],
+  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "demo-*/**/*.ts", "demo-*/**/*.js", "demo-*/**/*.svelte", "demo-*/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

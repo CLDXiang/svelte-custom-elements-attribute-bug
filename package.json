@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "vue": "vite --mode vue",
+    "react": "vite --mode react",
     "build": "vite build",
     "build:raw": "vite build --mode raw",
     "preview": "vite preview",
@@ -14,10 +16,17 @@
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "@tsconfig/svelte": "^5.0.2",
     "@types/node": "^20.11.28",
+    "@types/react": "^18.2.75",
+    "@types/react-dom": "^18.2.24",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "svelte": "^4.2.12",
     "svelte-check": "^3.6.6",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2",
-    "vite": "^5.1.6"
+    "vite": "^5.1.6",
+    "vue": "^3.4.21"
   }
 }
